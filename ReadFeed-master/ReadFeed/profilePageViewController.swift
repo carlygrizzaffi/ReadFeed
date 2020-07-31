@@ -10,9 +10,11 @@ import UIKit
 
 class profilePageViewController: UIViewController {
 
-    @IBOutlet weak var listOfBooks: UITextField!
-    
+   
     @IBOutlet weak var bookList: UILabel!
+    
+    
+    @IBOutlet weak var listOfBooks: UITextField!
     
     @IBOutlet weak var scrollView: UIScrollView!
     
@@ -21,6 +23,13 @@ class profilePageViewController: UIViewController {
         
           
         // Do any additional setup after loading the view.
+    }
+    
+    
+    @IBAction func addToList(_ sender: UIButton) {
+        if let newBook = listOfBooks.text {
+            bookList.text = newBook 
+        }
     }
     
     @IBAction func yesterdayUnselected(_ sender: UIButton) {
@@ -32,9 +41,7 @@ class profilePageViewController: UIViewController {
     
     
     
-    @IBAction func addBooksToRead(_ sender: UIButton) {
-       bookList.text = listOfBooks.text
-    }
+    
     
     }
     
